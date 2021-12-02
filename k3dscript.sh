@@ -2,7 +2,7 @@ echo "updating repository"
 sudo apt-get update
 sleep 5
 echo "installing docker"
-sudo apt install docker.io
+sudo apt install docker.io -y
 sleep 5
 echo "checking docker version"
 sudo docker --version
