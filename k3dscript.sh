@@ -8,8 +8,7 @@ echo "checking docker version"
 sudo docker --version
 sleep 5
 echo "Downloading the kubectl latest release with this command"
-sudo curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl
-"
+sudo curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
 sleep 5
 echo "Installing kubectl"
 sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl
