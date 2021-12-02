@@ -19,15 +19,6 @@ sleep 5
 echo "install rancher/k3d using curl"
 sudo curl -s https://raw.githubusercontent.com/rancher/k3d/main/install.sh | bash
 echo "installed k3d"
-echo "creating a single node cluster(only control-plane node)"
-sudo k3d cluster create mycluster
-sleep 5
-echo "getting control-plane  node"
-sudo kubectl get nodes
-echo "This is the control-plane/master node"
-sleep 5
-echo "Getting the cluster’s kubeconfig"
-sudo k3d kubeconfig merge mycluster --kubeconfig-switch-context
 sleep 5
 echo "Creating Multi-Server Clusters"
 sudo k3d cluster create multinode --agents 2 --servers 1
