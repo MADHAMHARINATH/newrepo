@@ -1,8 +1,10 @@
 echo "updating repository"
-sudo apt-get update
+sudo apt update
 sleep 5
 echo "installing docker"
-sudo apt install docker.io -y
+sudo apt install -y apt-transport-https ca-certificates curl gnupg-agent software-properties-common
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+sudo apt install docker-ce -y
 sleep 5
 echo "checking docker version"
 sudo docker --version
@@ -17,7 +19,7 @@ echo "Check the version"
 sudo kubectl version --client
 sleep 5
 echo "install rancher/k3d using curl"
-sudo curl -s https://raw.githubusercontent.com/rancher/k3d/main/install.sh | bash
+curl -s https://raw.githubusercontent.com/rancher/k3d/main/install.sh | TAG=v4.0.0 bash
 echo "installed k3d"
 sleep 5
 echo "Creating Multi-Server Clusters"
