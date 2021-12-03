@@ -1,20 +1,16 @@
 echo "updating repository"
 sudo apt update
-sleep 5
 echo "installing docker"
 sudo apt install -y apt-transport-https ca-certificates curl gnupg-agent software-properties-common
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
 sudo apt install docker-ce -y
-sleep 5
 echo "checking docker version"
 sudo docker --version
 sleep 5
 echo "Downloading the kubectl latest release with this command"
 sudo curl -LO https://dl.k8s.io/release/v1.20.0/bin/linux/amd64/kubectl
-sleep 5
 echo "Installing kubectl"
 sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl
-sleep 5
 echo "Check the version"
 sudo kubectl version --client
 sleep 5
