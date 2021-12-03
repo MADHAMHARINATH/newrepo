@@ -6,6 +6,7 @@
 ## **Clone the repository**
 ```
 git clone https://github.com/DhamodharReddy/newrepo.git && ls -ltr
+```
 ## **Change directory**
 ```
 cd newrepo && ls -ltr
